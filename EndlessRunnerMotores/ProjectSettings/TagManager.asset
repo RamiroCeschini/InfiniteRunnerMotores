@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - UpCollider
+  - RightCollider
+  - LeftCollider
+  - DiSpawn
+  - LoseTrigger
   layers:
   - Default
   - TransparentFX
