@@ -9,6 +9,8 @@ TagManager:
   - LeftCollider
   - DiSpawn
   - LoseTrigger
+  - PowerUp
+  - Score
   layers:
   - Default
   - TransparentFX

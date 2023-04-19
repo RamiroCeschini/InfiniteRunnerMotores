@@ -12,7 +12,7 @@ public class Disk : MonoBehaviour
     private void Start()
     {
         colid = GetComponent<Collider2D>();
-        Invoke(nameof(destroyDisk), 4);
+        Invoke(nameof(destroyDisk), 8);
 
     }
     void Update()
@@ -50,7 +50,8 @@ public class Disk : MonoBehaviour
 
         if (collision.gameObject.CompareTag("LoseTrigger"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("Defeat");
+            Time.timeScale = 1f;
         }
 
     }

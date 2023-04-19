@@ -19,4 +19,9 @@ public class Score : MonoBehaviour
         scoreText.text = "Score: " + (int)scoreNumber;
         scoreNumber += scoreAdd * Time.deltaTime;
     }
+
+    public void SumarPuntos(int puntos)
+    {
+        scoreNumber += puntos;
+    }
 }
