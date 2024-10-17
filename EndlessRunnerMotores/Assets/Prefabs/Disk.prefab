@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 778cc683abd14cc40b73ce0fdf2b4ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interaction: {fileID: 8300000, guid: 681ed9f7d14f6ef47ba4361e807a1b3c, type: 3}
   diskSpeed: -7
   beenTouched: 0
   colid: {fileID: 0}

@@ -23,6 +23,7 @@ public class PowerUp : MonoBehaviour
         {
             Destroy(powerUpVisual);
             Time.timeScale = 0.5f;
+            SoundManager.Instance.PowerUp(false);
             Invoke("NormalTime", 3f);
             _score.SumarPuntos(100);
         }
@@ -32,5 +33,6 @@ public class PowerUp : MonoBehaviour
     {
         Destroy(gameObject);
         Time.timeScale = 1f;
+        SoundManager.Instance.PowerUp(true);
     }
 }

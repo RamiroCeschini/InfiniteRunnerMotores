@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Disk : MonoBehaviour
 
 {
+    [SerializeField] private AudioClip interaction;
     public float diskSpeed = -2f;
     public bool beenTouched = false;
     public Collider2D colid;
@@ -30,6 +31,7 @@ public class Disk : MonoBehaviour
             transform.Rotate(0,0,180);
             colid.enabled = false;
             beenTouched = true;
+            SoundManager.Instance.SFX(interaction);
         }
 
         if (collision.gameObject.CompareTag("RightCollider") && beenTouched == false)
@@ -38,6 +40,7 @@ public class Disk : MonoBehaviour
             diskSpeed -= 2;
             beenTouched = true;
             colid.enabled = false;
+            SoundManager.Instance.SFX(interaction);
         }
 
         if (collision.gameObject.CompareTag("LeftCollider") && beenTouched == false)
@@ -46,11 +49,13 @@ public class Disk : MonoBehaviour
             diskSpeed -= 2;
             beenTouched = true;
             colid.enabled = false;
+            SoundManager.Instance.SFX(interaction);
         }
 
         if (collision.gameObject.CompareTag("LoseTrigger"))
         {
             SceneManager.LoadScene("Defeat");
+            SoundManager.Instance.LoseMusic(false);
             Time.timeScale = 1f;
         }
 

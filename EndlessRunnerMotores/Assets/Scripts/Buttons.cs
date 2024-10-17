@@ -7,7 +7,17 @@ public class Buttons : MonoBehaviour
 {
     public void Play()
     {
+        SoundManager.Instance.SwapMusic(false);
+        Debug.Log("swap music");
         SceneManager.LoadScene("Game");
+
+    }
+
+    public void PlayAgain()
+    {
+        SoundManager.Instance.LoseMusic(true);
+        SceneManager.LoadScene("Game");
+
     }
 
     public void Exit()
@@ -17,6 +27,8 @@ public class Buttons : MonoBehaviour
 
     public void Menu()
     {
+        SoundManager.Instance.SwapMusic(true);
         SceneManager.LoadScene("Menu");
+
     }
 }

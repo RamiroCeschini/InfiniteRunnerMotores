@@ -775,7 +775,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 385132263}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
-        m_MethodName: Play
+        m_MethodName: PlayAgain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1082,6 +1082,7 @@ GameObject:
   - component: {fileID: 1708532724}
   - component: {fileID: 1708532726}
   - component: {fileID: 1708532725}
+  - component: {fileID: 1708532727}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -1152,6 +1153,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708532723}
   m_CullTransparentMesh: 1
+--- !u!95 &1708532727
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708532723}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e80bc9e7729678040b6034e3f627586d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2034182877
 GameObject:
   m_ObjectHideFlags: 0
