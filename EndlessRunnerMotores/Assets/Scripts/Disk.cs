@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Disk : MonoBehaviour
 
 {
-    [SerializeField] private AudioClip interaction;
+    [SerializeField] private AudioClip interaction, interaction2;
     public float diskSpeed = -2f;
     public bool beenTouched = false;
     public Collider2D colid;
@@ -54,6 +54,7 @@ public class Disk : MonoBehaviour
 
         if (collision.gameObject.CompareTag("LoseTrigger"))
         {
+            SoundManager.Instance.SFX(interaction2);
             SceneManager.LoadScene("Defeat");
             SoundManager.Instance.LoseMusic(false);
             Time.timeScale = 1f;

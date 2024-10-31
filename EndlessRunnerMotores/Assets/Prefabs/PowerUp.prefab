@@ -47,8 +47,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d030cfaf0d7d914bbd50c00a2d6d11e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interaction: {fileID: 8300000, guid: 81d0638f07284ca46a4812a6aa966ae2, type: 3}
   powerUpSpeed: -7
   powerUpVisual: {fileID: 5439527701298704346}
+  _score: {fileID: 0}
 --- !u!50 &5439527699908099787
 Rigidbody2D:
   serializedVersion: 4

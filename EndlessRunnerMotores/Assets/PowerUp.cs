@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
+    [SerializeField] private AudioClip interaction;
     public float powerUpSpeed = -2f;
     public GameObject powerUpVisual;
     public Score _score;
@@ -21,6 +22,7 @@ public class PowerUp : MonoBehaviour
     {
         if (collision.CompareTag("UpCollider") || collision.CompareTag("LeftCollider") || collision.CompareTag("RightCollider"))
         {
+            SoundManager.Instance.SFX(interaction);
             Destroy(powerUpVisual);
             Time.timeScale = 0.5f;
             SoundManager.Instance.PowerUp(false);
